@@ -78,114 +78,37 @@ h3 {
   font-size: larger;
 }
 /* Slideshow container */
-.slideshow-container {
-  max-width: 50vw;
-  position: relative;
-  margin: auto;
-  max-block-size: 50%;
-}
-
-/* Hide the images by default */
-.mySlides {
-  display: none;
-}
-.mySlides:nth-child(1) {
-  display: block;
-}
 
 img {
   vertical-align: middle;
 }
 /* Next & previous buttons */
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: black;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
+.galerie {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 80%;
+  max-width: 1300px;
+  margin: 70px auto 0;
+  /* background: crimson; */
 }
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+.item {
+  width: 25%;
+  height: 25%;
+  margin: 10px;
+  overflow: hidden;
+  flex-shrink: 0;
 }
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-  background-color: rgba(255, 255, 255, 0.8);
+.item p {
+  color: white;
+  font-size: 85%;
 }
-
-/* Caption text */
-.text {
-  color: black;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
+.item img {
   width: 100%;
-  text-align: center;
+  height: auto;
 }
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: black;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active,
-.dot:hover {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
+.item img:hover {
+  background-color: white;
 }
 footer {
   position: relative;
@@ -227,38 +150,7 @@ footer .container .sec.aboutus h2:before {
 footer .container .sec.aboutus p {
   color: #999;
 }
-.sci {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.sci li {
-  list-style: none;
-}
-.sci li a {
-  display: inline-block;
-  width: 35px;
-  height: 35px;
-  background: #222;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  margin-right: 10px;
-  text-decoration: none;
-}
-.sci li a:hover {
-  background: #f00;
-  color: #fff;
-}
-.sci li a span {
-  font-size: 25px;
-  text-align: center;
-  color: #999;
-}
-.sci li a span:hover {
-  color: #fff;
-}
+
 .inputemail {
   display: flex;
   flex-direction: row;
@@ -279,44 +171,4 @@ footer .container .sec.aboutus p {
 .inputemail input:focus {
   border: red solid 1px;
   border-radius: 5%;
-}
-@font-face {
-  font-family: "icomoon";
-  src: url("fonts/icomoon.eot?c6hlpm");
-  src: url("fonts/icomoon.eot?c6hlpm#iefix") format("embedded-opentype"),
-    url("fonts/icomoon.ttf?c6hlpm") format("truetype"),
-    url("fonts/icomoon.woff?c6hlpm") format("woff"),
-    url("fonts/icomoon.svg?c6hlpm#icomoon") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
-}
-
-[class^="icon-"],
-[class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "icomoon" !important;
-  speak: never;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-facebook:before {
-  content: "\ea90";
-}
-.icon-instagram:before {
-  content: "\ea92";
-}
-.icon-twitter:before {
-  content: "\ea96";
-}
-.icon-youtube:before {
-  content: "\ea9d";
 }
